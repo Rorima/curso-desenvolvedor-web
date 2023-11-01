@@ -36,22 +36,25 @@ Toda linguagem baseada em tags tem tags que abrem e tags que fecham. Uma tag é 
 </html>
 ```
 
-[VEJA SE ISSO É NECESSÁRIO]
-### Fundamentos de HTML
-
-Crie uma pasta chamada "fundamentos" e cole dentro desta pasta fotos de pizza. Crie um arquivo chamado "pizza-calabresa.html" e vamos começar a programar.
-
-A linguagem HTML tem tags e atributos. Utilizaremos o atributo `lang` para definir o idioma da página.
+Dentro da tag HTML colocaremos uma tag chamada `<head>` e outra chamada `<body>`. Essas são as tags mais importantes do HTML. Na *head* fica todo o cabeçalho do documento, enquanto que na *body* fica o corpo da página. 
 
 ```html
-<html lang="pt-BR">
+<html>
+    <head>
+        
+    </head>
+    <body>
+        
+    </body>
 </html>
 ```
 
-Precisamos de mais duas tags dentro da nossa tag HTML. O nome delas é `<head>` e `<body>`. Ambas precisam ser fechadas. Precisamos fazer isso em todas as páginas que fizermos.
+Algumas coisas nas páginas estão expostas para as pessoas lerem, mas outras coisas estão expostas somente para as máquinas. No início do nosso arquivo nós temos que mostrar que tipo de arquivo ele é para que a máquina entenda. Para isso, é necessário digitar uma tag no início do arquivo. Esta é a tag: `<!DOCTYPE html>`. Essa tag não precisa ser fechada.
 
 ```html
-<html lang="pt-BR">
+<!DOCTYPE html>
+
+<html>
     <head>
 
     </head>
@@ -61,30 +64,106 @@ Precisamos de mais duas tags dentro da nossa tag HTML. O nome delas é `<head>` 
 </html>
 ```
 
-Vamos adicionar a tag `<title>` dentro da tag `<head>`. Dentro da tag `<title>` podemos colocar o nome do título da nossa página, que é o nome dado à aba da página. Como estamos fazendo uma página sobre pizza de calabresa, colocaremos isso como o título.
+As tags HTML podem ter atributos. A tag principal HTML, por exemplo, tem o atributo `lang=""`, que indica o idioma usado na página. Utilizaremos o português do Brasil.
 
 ```html
+[...]
 <html lang="pt-BR">
-    <head>
-        <title>Pizza Calabresa</title>
-    </head>
-    <body>
-
-    </body>
-</html>
+[...]
 ```
 
-Com a tag `<h1>` podemos escolher um título à página, mas desta vez o título será mostrado no corpo da página.
+Os `[...]` indicam que há código antes e depois. Eles foram colocados ali para que todo o código não precisasse ser repetido.
+
+#### Mais tags
+
+**`<title></title>`**
+
+Esta tag define o título da página. O título é o que aparece lá em cima, na aba do navegador.
+
+Esta tag deve ser colocada entre as tags `<head>`.
 
 ```html
-<html lang="pt-BR">
-    <head>
-        <title>Pizza Calabresa</title>
-    </head>
-    <body>
-        <h1>Pizza Calabresa</h1>
-    </body>
-</html>
+<head>
+    <title>Primeira Página</title>
+</head>
+```
+
+**`<meta>`**
+
+Esta tag tem vários atributos. Entre eles, há um chamado "charset", que é a configuração de caracteres. Geralmente utilizamos o "utf-8", que abrange uma grandíssima parte dos caracteres das línguas do mundo.
+
+Esta tag deve ser colocada entre as tags `<head>`.
+
+```html
+<head>
+    <meta charset="utf-8">
+</head>
+```
+
+**`<p></p>`**
+
+Esta tag cria parágrafos. Entre elas podemos escrever o que quisermos, e o texto que escrevermos será mostrado para o leitor da página.
+
+Esta tag deve ser colocada entre as tags `<body>`.
+
+```html
+<body>
+    <p>Até manhã!</p>
+</body>
+```
+
+#### Como ver seus sites
+
+Para ver os sites que você criou, basta abrir os arquivos HTML no seu navegador. Você pode fazer isso arrastando o arquivo para o seu navegador. Todas as mudanças que você fizer podem ser vistas na página se você recarregá-la.
+
+#### Espaços vazios e comentários
+
+Se você adicionar múltiplos espaços em branco nos seus parágrafos, eles não serão vistos e ficará como se você tivesse colocado somente um espaço:
+
+```html
+<p>Até                                       amanhã!</p>
+```
+
+Todos esses espaços não serão vistos.
+
+Para adicionar espaços em branco, você vai precisar usar um código. Este é o código do espaço em branco: `&nbsp;`. Usando ele você pode adicionar quantos espaços em branco você quiser.
+
+```html
+<p>Até &nbsp;&nbsp;&nbsp;&nbsp; amanhã!</p>
+```
+
+Usando o esse mesmo e comercial juntamente com o ponto e vírgula no final é possível adicionar vários símbolos. Pesquise por HTML entities e você vai ver uma lista com todas eles. Aqui vão alguns:
+
+```html
+<p>Algumas entidades:</p>
+
+<p>Mostrando euro: 15.99 &euro;</p>
+<p>Mostrando libra: 15.99 &pound;;</p>
+
+<p>Mostrando o sinal de maior que: 3 &gt; 2</p>
+<p>Mostrando o sinal de menor que: 2 &lt; 3</p>
+```
+
+**Comentários**
+
+Os comentários podem ser colocados dentro destes símbolos: `<!-- -->`. Comentários não são mostrados para os leitores. Você pode usá-los para explicar uma parte difícil do seu código ou para se lembrar de algo mais tarde. Não guarde segredos nesses comentários, pois um usuário consegue ter acesso a ele se ele vir o código fonte da página, que pode ser facilmente acessado através da opção "inspecionar elemento" quando se clica com o botão direito na página.
+
+```html
+<body>
+    <!--Este é um comentário de uma linha-->
+    <!--
+        Este comentário
+        tem várias
+        linhas
+    -->
+    <p>Até &nbsp;&nbsp;&nbsp; manhã!</p>
+</body>
+```
+
+### Explorando o head
+
+```html
+
 ```
 ```html
 
