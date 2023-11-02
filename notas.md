@@ -14,7 +14,7 @@ O que iremos aprender:
 * Adicionar links;
 * Novos elementos estruturais.
 
-### Breve história do HTML5
+### Breve História do HTML5
 
 Em 2004, a W3C iniciou o desenvolvimento do XHTML 2.0. Frustrados com os rumos do HTML 2.0, um grupo de profissionais e corporações iniciaram o desenvolvimento do HTML5. Este grupo é chamado de Web Hipertext Application Technology Working Group, ou a WHATWG. O grupo iniciou as especificações do que eles chamaram de Web Applications 1.0. Em 2007, a W3C adotou as especificações do WHATWG e o renomeou para HTML5. Desde então, o XHTML 2.0 foi revogado, deixando apenas o HTML5 como substituto do HTML 4.0
 
@@ -27,7 +27,7 @@ Em 2004, a W3C iniciou o desenvolvimento do XHTML 2.0. Frustrados com os rumos d
 
 Essas características ajudam a profissionais a criarem web e mobile applications, disponibilizar vídeos e áudios, além de um conteúdo mais interativo.
 
-### Primeira página HTML
+### Primeira Página HTML
 
 Toda linguagem baseada em *tags* tem tags que abrem e *tags* que fecham. Uma *tag* é um nome entre os símbolos `<` e `>`. Para criar uma página HTML precisamos criar um arquivo e salvá-lo com a extensão `.html`. Dentro do arquivo precisamos das *tags* `<html></html>`. A barra indica que a *tag* está sendo fechada.
 
@@ -112,11 +112,11 @@ Esta *tag* deve ser colocada entre as *tags* `<body>`.
 </body>
 ```
 
-#### Como ver seus sites
+#### Como Ver Seus Sites
 
 Para ver os sites que você criou, basta abrir os arquivos HTML no seu navegador. Você pode fazer isso arrastando o arquivo para o seu navegador. Todas as mudanças que você fizer podem ser vistas na página se você recarregá-la.
 
-#### Espaços vazios e comentários
+#### Espaços Vazios e Comentários
 
 Se você adicionar múltiplos espaços em branco nos seus parágrafos, eles não serão vistos e ficará como se você tivesse colocado somente um espaço:
 
@@ -172,7 +172,7 @@ Estes são os 5 elementos do *head*:
 * *meta element*;
 * *style element*;
 
-#### Aplicando CSS ao documento HTML
+#### Aplicando CSS ao Documento HTML
 
 Crie um arquivo como o da seção anterior, mas cujo título seja "Unidade 02 - Elemento Head".
 
@@ -180,14 +180,278 @@ Existem várias maneiras de aplicar estilos em uma página HTML. Vamos mostrar s
 
 Abra e feche a *tag* `<style>` dentro do *head* do arquivo.
 
+```html
+<head>
+    <meta charset="utf-8">
+    <title>Unidade 02 - Elemento Head</title>
 
+    <style>
+    </style>
+</head>
+```
+
+Dentro dela, mudaremos a cor de fundo de nosso site. Para isso, precisamos modificar o *body*.
+
+```html
+<head>
+    [...]
+    <style>
+        body {}
+    </style>
+</head>
+```
+
+As cores podem ser definidas pelo formato hexadecimal ou outros formatos, como RGB ou ainda o nome das cores em inglês. Se quiser saber como são as cores no formato hexadecimal, pesquise online por "hex color picker".
+
+Utilize o atributo "background" para mudar a cor de fundo.
+
+```html
+<head>
+    [...]
+    <style>
+        body {
+            background: #f0f0f0;
+        }
+    </style>
+</head>
+```
+
+**Alterando a Fonte**
+
+Vamos escrever um texto no *body*:
+
+```html
+<body>
+    <p>Esta é a segunda unidade.</p>
+</body>
+```
+
+Utilize o atributo "font-family" para alterar a fonte do *body*, que consequentemente irá alterar a fonte de toda a página:
+
+```html
+<head>
+    [...]
+    <style>
+        body {
+            background: #f0f0f0;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+    </style>
+</head>
+```
+
+Demos três fontes diferentes como opção para o navegador. A fonte só é selecionada se ela estiver instalada no navegador do usuário. Assim, se a fonte "Arial" não estiver presente, o navegador irá usar a "Helvetica", mas se ela não estiver presente, então o navegador irá utilizar a "sans-serif". É sempre bom indicar mais de uma fonte.
+
+**Alterando a Cor do Texto**
+
+Utilize o atributo "color" para alterar a cor da fonte. Você pode usar cores hexadecimais também.
+
+```html
+<head>
+    [...]
+    <style>
+        body {
+            background: #f0f0f0;
+            font-family: Arial, Helvetica, sans-serif;
+            color: #747474;
+        }
+    </style>
+</head>
+```
+
+#### Aplicando o JavaScript
+
+Para adicionar código JavaScript na sua página, abra e feche a *tag* `<script>` dentro da *tag* *head*.
+
+```html
+<head>
+    [...]
+    <script></script>
+</head>
+```
+
+Vamos criar um parágrafo no nosso *body*. Dentro da *tag* inicial do parágrafo vamos colocar um atributo chamado "id" com o valor chamado "nome" para que possamos acessá-lo utilizando JavaScript:
+
+```html
+<body>
+    <p>Esta é a segunda unidade.</p>
+    <p id="nome"></p>
+</body>
+```
+
+Agora, entre as nossas *tags* `<script>` iremos escrever uma função:
+
+```html
+<head>
+    <script>
+        function escreverNome() {
+            nome.innerHTML = "Paulo de Tarso";
+        }
+
+        window.onload = escreverNome;
+    </script>
+</head>
+```
+
+Com essa função, assim que a página for carregada o nome será escrito na página.
+
+### Texto do Documento
+
+Iremos aprender a trabalhar com o texto do documento.
 
 ```html
 
 ```
+```html
 
-As cores podem ser definidas por formato hexadecimal ou outros formatos. Se quiser saber como são as cores no formato hexadecimal, pesquise online por "hex color picker".
+```
+```html
 
+```
+```html
+
+```
+```html
+
+```
+```html
+
+```
+```html
+
+```
+```html
+
+```
+```html
+
+```
+```html
+
+```
+```html
+
+```
+```html
+
+```
+```html
+
+```
+```html
+
+```
+```html
+
+```
+```html
+
+```
+```html
+
+```
+```html
+
+```
+```html
+
+```
+```html
+
+```
+```html
+
+```
+```html
+
+```
+```html
+
+```
+```html
+
+```
+```html
+
+```
+```html
+
+```
+```html
+
+```
+```html
+
+```
+```html
+
+```
+```html
+
+```
+```html
+
+```
+```html
+
+```
+```html
+
+```
+```html
+
+```
+```html
+
+```
+```html
+
+```
+```html
+
+```
+```html
+
+```
+```html
+
+```
+```html
+
+```
+```html
+
+```
+```html
+
+```
+```html
+
+```
+```html
+
+```
+```html
+
+```
+```html
+
+```
+```html
+
+```
+```html
+
+```
+```html
+
+```
+```html
+
+```
+```html
+
+```
 ```html
 
 ```
