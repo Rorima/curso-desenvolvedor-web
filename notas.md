@@ -21,22 +21,22 @@ Em 2004, a W3C iniciou o desenvolvimento do XHTML 2.0. Frustrados com os rumos d
 **O que tem de especial no HTML 5**
 
 * Ele mantém a compatibilidade com as versões anteriores do HTML;
-* Contém muitas características que facilitam o desenvolvimento de apilcações;
+* Contém muitas características que facilitam o desenvolvimento de aplicações;
 * Foco no desenvolvimento de Web Application;
 * Inclui melhores campos de formulário e suporte a vários tipos de API's.
 
-Essas características ajudam a profissionais a criarem web e mobile applications, disponibilizar vídeos e aúdios, além de um conteúdo mais interativo.
+Essas características ajudam a profissionais a criarem web e mobile applications, disponibilizar vídeos e áudios, além de um conteúdo mais interativo.
 
 ### Primeira página HTML
 
-Toda linguagem baseada em tags tem tags que abrem e tags que fecham. Uma tag é um nome entre os símbolos `<` e `>`. Para criar uma página HTML precisamos criar um arquivo e salvá-lo com a extensão `.html`. Dentro do arquivo precisamos das tags `<html></html>`. A barra indica que a tag está sendo fechada.
+Toda linguagem baseada em *tags* tem tags que abrem e *tags* que fecham. Uma *tag* é um nome entre os símbolos `<` e `>`. Para criar uma página HTML precisamos criar um arquivo e salvá-lo com a extensão `.html`. Dentro do arquivo precisamos das *tags* `<html></html>`. A barra indica que a *tag* está sendo fechada.
 
 ```html
 <html>
 </html>
 ```
 
-Dentro da tag HTML colocaremos uma tag chamada `<head>` e outra chamada `<body>`. Essas são as tags mais importantes do HTML. Na *head* fica todo o cabeçalho do documento, enquanto que na *body* fica o corpo da página. 
+Dentro da *tag* HTML colocaremos uma *tag* chamada `<head>` e outra chamada `<body>`. Essas são as *tags* mais importantes do HTML. Na *head* fica todo o cabeçalho do documento, enquanto que na *body* fica o corpo da página. 
 
 ```html
 <html>
@@ -49,7 +49,7 @@ Dentro da tag HTML colocaremos uma tag chamada `<head>` e outra chamada `<body>`
 </html>
 ```
 
-Algumas coisas nas páginas estão expostas para as pessoas lerem, mas outras coisas estão expostas somente para as máquinas. No início do nosso arquivo nós temos que mostrar que tipo de arquivo ele é para que a máquina entenda. Para isso, é necessário digitar uma tag no início do arquivo. Esta é a tag: `<!DOCTYPE html>`. Essa tag não precisa ser fechada.
+Algumas coisas nas páginas estão expostas para as pessoas lerem, mas outras coisas estão expostas somente para as máquinas. No início do nosso arquivo nós temos que mostrar que tipo de arquivo ele é para que a máquina entenda. Para isso, é necessário digitar uma *tag* no início do arquivo. Esta é a *tag*: `<!DOCTYPE html>`. Essa *tag* não precisa ser fechada.
 
 ```html
 <!DOCTYPE html>
@@ -64,7 +64,7 @@ Algumas coisas nas páginas estão expostas para as pessoas lerem, mas outras co
 </html>
 ```
 
-As tags HTML podem ter atributos. A tag principal HTML, por exemplo, tem o atributo `lang=""`, que indica o idioma usado na página. Utilizaremos o português do Brasil.
+As *tags* HTML podem ter atributos. A *tag* principal HTML, por exemplo, tem o atributo `lang=""`, que indica o idioma usado na página. Utilizaremos o português do Brasil.
 
 ```html
 [...]
@@ -74,13 +74,13 @@ As tags HTML podem ter atributos. A tag principal HTML, por exemplo, tem o atrib
 
 Os `[...]` indicam que há código antes e depois. Eles foram colocados ali para que todo o código não precisasse ser repetido.
 
-#### Mais tags
+#### Mais *tags*
 
 **`<title></title>`**
 
-Esta tag define o título da página. O título é o que aparece lá em cima, na aba do navegador.
+Esta *tag* define o título da página. O título é o que aparece lá em cima, na aba do navegador.
 
-Esta tag deve ser colocada entre as tags `<head>`.
+Esta *tag* deve ser colocada entre as *tags* `<head>`.
 
 ```html
 <head>
@@ -90,9 +90,9 @@ Esta tag deve ser colocada entre as tags `<head>`.
 
 **`<meta>`**
 
-Esta tag tem vários atributos. Entre eles, há um chamado "charset", que é a configuração de caracteres. Geralmente utilizamos o "utf-8", que abrange uma grandíssima parte dos caracteres das línguas do mundo.
+Esta *tag* tem vários atributos. Entre eles, há um chamado "charset", que é a configuração de caracteres. Geralmente utilizamos o "utf-8", que abrange uma grandíssima parte dos caracteres das línguas do mundo.
 
-Esta tag deve ser colocada entre as tags `<head>`.
+Esta *tag* deve ser colocada entre as *tags* `<head>`.
 
 ```html
 <head>
@@ -102,9 +102,9 @@ Esta tag deve ser colocada entre as tags `<head>`.
 
 **`<p></p>`**
 
-Esta tag cria parágrafos. Entre elas podemos escrever o que quisermos, e o texto que escrevermos será mostrado para o leitor da página.
+Esta *tag* cria parágrafos. Entre elas podemos escrever o que quisermos, e o texto que escrevermos será mostrado para o leitor da página.
 
-Esta tag deve ser colocada entre as tags `<body>`.
+Esta *tag* deve ser colocada entre as *tags* `<body>`.
 
 ```html
 <body>
@@ -132,7 +132,7 @@ Para adicionar espaços em branco, você vai precisar usar um código. Este é o
 <p>Até &nbsp;&nbsp;&nbsp;&nbsp; amanhã!</p>
 ```
 
-Usando o esse mesmo e comercial juntamente com o ponto e vírgula no final é possível adicionar vários símbolos. Pesquise por HTML entities e você vai ver uma lista com todas eles. Aqui vão alguns:
+Usando esse mesmo e comercial juntamente com o ponto e vírgula no final é possível adicionar vários símbolos. Pesquise por "HTML entities" e você vai ver uma lista com todas eles. Aqui vão alguns:
 
 ```html
 <p>Algumas entidades:</p>
@@ -160,11 +160,34 @@ Os comentários podem ser colocados dentro destes símbolos: `<!-- -->`. Coment�
 </body>
 ```
 
-### Explorando o head
+### Explorando o *head*
+
+O *head* é a parte pensante da página. Nela ficam algumas partes importantes da página, como os metadados, estilos, scripts e etc. Como analogia, o *head* é a cabeça, o *body* é o corpo, e o *html* é o conjunto dos dois.
+
+Estes são os 5 elementos do *head*:
+
+* *title element*;
+* *base element*;
+* *link element*;
+* *meta element*;
+* *style element*;
+
+#### Aplicando CSS ao documento HTML
+
+Crie um arquivo como o da seção anterior, mas cujo título seja "Unidade 02 - Elemento Head".
+
+Existem várias maneiras de aplicar estilos em uma página HTML. Vamos mostrar só uma por enquanto. O estilo serve para personalizar a aparência de uma página.
+
+Abra e feche a *tag* `<style>` dentro do *head* do arquivo.
+
+
 
 ```html
 
 ```
+
+As cores podem ser definidas por formato hexadecimal ou outros formatos. Se quiser saber como são as cores no formato hexadecimal, pesquise online por "hex color picker".
+
 ```html
 
 ```
