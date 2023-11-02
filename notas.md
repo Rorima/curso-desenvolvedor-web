@@ -385,12 +385,83 @@ Aqui vão algumas *tags* de marcação:
 
 #### Trabalhando com Lista
 
-```html
+Em HTML existem três tipos listas, a sem ordem, a ordenada e a descritiva:
 
-```
 ```html
+<body>
+    <h1>Listas</h1>
 
+    <h2>Listam sem Ordem</h3>
+    <ul>
+        <li>Brasil</li>
+        <li>Argentina</li>
+        <li>Uruguai</li>
+        <li>Venezuela</li>
+    </ul>
+
+    <h2>Lista em Ordem</h2>
+    <ol>
+        <li>Alonso</li>
+        <li>Vettel</li>
+        <li>Massa</li>
+        <li>Button</li>
+    </ol>
+
+    <h2>Lista Descritiva</h2>
+    <!--Definindo a lista-->
+    <dl>
+        <!--Definindo um termo-->
+        <dt>Unidade 01</dt>
+        <!--Descrevendo o termo-->
+        <dd>
+            Apresentação do Curso<br>
+            Melhores softwares para usar neste curso
+        </dd>
+
+        <!--Definindo outro termo-->
+        <dt>Unidade 02</dt>
+        <!--Descrevendo-o-->
+        <dd>
+            Uma breve história do HTML5<br>
+            Especificações do HTML5<br>
+            HTML5 VS HTML4<br>
+        </dd>
+    </dl>
+</body>
 ```
+
+* ul: "unordered list" ou "lista não ordenada";
+* li: "list item" ou "item da lista";
+* ol: "ordered list" ou "lista ordenada";
+* dl: "description list" ou "lista descritiva";
+* dt: "description term" ou "termo da descrição";
+* dd: "description definition" ou "definição da descrição".
+
+Uma lista não ordenada é apresentada com pontos antes de cada item. Uma lista ordenada é apresentada com números antes de cada item. Uma lista descritiva é uma lista de termos com uma descrição para cada um dos termos.
+
+**Tipos**
+
+É possível editar os pontos de uma lista também. Para a lista não ordenada, podemos utilizar os tipos `square`, `cricle` e `none`.
+
+```html
+<ul type="circle">
+        <li>Brasil</li>
+        <li>Argentina</li>
+        <li>Uruguai</li>
+        <li>Venezuela</li>
+    </ul>
+```
+
+Para a lista ordenada, podemos utilizar:
+
+* `a`: Mostra os itens em ordem alfabética com letras minúsculas;
+* `A`: Mostra os itens em ordem alfabética com letras maiúsculas;
+* `I`: Mostra os itens com letras romanas.
+
+#### Usando `<i>` e `<em>`
+
+
+
 ```html
 
 ```
