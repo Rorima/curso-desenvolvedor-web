@@ -297,23 +297,94 @@ Com essa função, assim que a página for carregada o nome será escrito na pá
 
 ### Texto do Documento
 
-Iremos aprender a trabalhar com o texto do documento.
+Iremos aprender a trabalhar com o texto do documento. 
+
+#### Cabeçalhos
+
+Adicionaremos um texto de cabeçalho. O cabeçalho é o texto que tem maior destaque na página, como o título. Não é o título que fica lá em cima, na aba do navegador, mas o título da página que o leitor irá ler. Para isso, utilizaremos a *tag* `<h1>`.
 
 ```html
-
+<body>
+    <h1>Baleia jubarte presa em rede ganha a ajuda de pescadores no litoral de SP</h1>
+</body>
 ```
+
+Existem seis *tags* de cabeçalho. Elas vão de 1 a 6. Quanto maior for o número, menor é será a fonte. Quanto menor o número, mais destaque o texto dentro da *tag* terá.
+
+**`<hgroup>`**
+
+Esta *tag* agrupa *tags* de cabeçalho para deixar tudo mais organizado.
+
 ```html
-
+<body>
+    <hgroup>
+        <h1>Baleia jubarte presa em rede ganha a ajuda de pescadores no litoral de SP</h1>
+        <h2>Animal estava a cerca de 4 km da praia de Mongaguá. Segundo biólogos, espécie migra para águas tropicais nesta época do ano.</h2>
+    </hgroup>
+</body>
 ```
+
+#### Parágrafos
+
+Para adicionar parágrafos, utilize a *tag* `<p>`. Entre elas digite o texto que você deseja. Cada parágrafo é separado por padrão em um bloco diferente na página.
+
 ```html
+<body>
+    [...]
 
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni, nemo iusto laudantium assumenda fuga fugit, blanditiis doloribus nobis, enim ipsa quo? Ducimus vel reprehenderit a odit ipsum facere voluptate fuga?</p>
+
+    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. In culpa vel mollitia voluptas fugit, eum exercitationem nulla cum nobis cumque. Doloremque iste fuga consectetur placeat blanditiis recusandae nihil esse facere!</p>
+</body>
 ```
+
+#### Quebrando Linhas
+
+Da mesma maneira que é necesário um código para mostrar mais do que um espaço em branco seguido, há também uma *tag* usada para quebrar linhas, já que na página, o texto não vai pra linha de baixo se você der ENTER.
+
 ```html
-
+<body>
+    <p>
+        Nome: Chaves;
+        Endereço: 8;
+        País: México;
+        Profissão: Criança.
+    </p>
+</body>
 ```
+
+Todo o texto do parágrafo acima é mostrado em uma única linha. Podemos criar um parágrafo para cada uma dessas informações, entretanto, porque há um espaço padrão entre cada parágrafo, essas informações ficariam bastante separadas.
+
+Para adicionar quebras de linha precisamos utilizar a *tag* `<br>`. Esta *tag* não precisa ser fechada. "br" significa "break row", ou "quebrar linha" em português.
+
 ```html
-
+<body>
+    <p>
+        Nome: Chaves;<br>
+        Endereço: 8;<br>
+        País: México;<br>
+        Profissão: Criança.
+    </p>
+</body>
 ```
+
+#### Usando Marcações
+
+Aqui vão algumas *tags* de marcação:
+
+```html
+<body>
+    <p>Texto em <b>negrito</b></p>
+    <p>Texto em <i>itálico</i></p>
+    <p>Texto em <u>sublinhado</u></p>
+    <p>Texto em <sub>subscrito</sub></p>
+    <p>Texto em <sup>superescrito</sup></p>
+    <p>Texto em <s>riscado</s></p>
+</body>
+```
+
+#### Trabalhando com Lista
+
 ```html
 
 ```
