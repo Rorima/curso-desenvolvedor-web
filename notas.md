@@ -484,18 +484,74 @@ Como visto, na aparência não há muita diferença. A maior diferença é a sin
 
 Essas duas tags fazem a mesma coisa aparentemente, pois elas deixam o texto em negrito. A diferença entre as duas é somente na semântica. Quando quisermos realçar uma palavra, utilizamos `<strong>`. Geralmente utilizamos `<b>` mais do que `<strong>`.
 
-```html
+### Como adicionar imagens
 
-```
-```html
+Vamos aprender a inserir uma imagem em nossa página web.
 
-```
-```html
+Para adicionar uma imagem utilizaremos a tag `<img>`. Ela se fecha sozinha. Ela tem alguns atributos. O primeiro que iremos utilizar é o `src` ("source" ou "fonte" do inglês), que indica a fonte da imagem. Você pode dar o caminho de um diretório que leva até a imagem, ou um link da Internet. Utilizaremos os dois.
 
-```
-```html
+Outros atributos:
 
+* `width`: largura da imagem;
+* `height`: altura da imagem;
+* `title`: texto que aparece quando o mouse é colocado sobre a imagem;
+* `alt`: texto que aparece se a imagem não for mostrada.
+
+```html
+<body>
+    <!--Imagem de uma pasta-->
+    <img src="./imagens/pexels-nyara-aquino-5643427.jpg" height="200" alt="Imagem ilustrativa de pato com laranja" title="Pato com Laranja">
+
+    <!--Imagem da Internet-->
+    <img src="https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2F4.bp.blogspot.com%2F-BfKwJQgzWcc%2FUjM2ey19flI%2FAAAAAAAABQg%2FWu5L19XUO_I%2Fs1600%2FSAM_3338.JPG&f=1&nofb=1&ipt=677571b2d65e41fdfe0a04e4e459ccdffbfd1a77b469758fd7d99ee29a338e32&ipo=images" height="200" alt="Imagem ilustrativa de pato com laranja" title="Pato com Laranja">
+<body>
 ```
+
+#### Alterando o alinhamento da imagem
+
+Usando o arquivo anterior como exemplo, observe que a imagem aparece em uma linha, enquanto que o texto aparece em outra linha. Isso é porque a imagem é um elemento, e o texto é outro elemento. Elementos são separados automaticamente.
+
+Vamos supor que queiramos que o texto apareça ao lado direito da imagem. Podemos fazer isso utilizando estilos (que faz parte do CSS). Para isso, utilizaremos o estilo em linha, que é o estilo feito dentro da *tag* que queremos estilizar.
+
+Como um atributo da *tag* `<img>` digite `style="float:left";`. Isso significa que a imagem vai ficar presa à esquerda e tudo o que tiver em baixo vai vir para a direita dela. "float" significa "flutuar" em português.
+
+```html
+[...]
+<img src="./imagens/pexels-nyara-aquino-5643427.jpg" height="200" alt="Imagem ilustrativa de pato com laranja" title="Pato com Laranja" style="float:left;">
+<img src="https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2F4.bp.blogspot.com%2F-BfKwJQgzWcc%2FUjM2ey19flI%2FAAAAAAAABQg%2FWu5L19XUO_I%2Fs1600%2FSAM_3338.JPG&f=1&nofb=1&ipt=677571b2d65e41fdfe0a04e4e459ccdffbfd1a77b469758fd7d99ee29a338e32&ipo=images" height="200" alt="Imagem ilustrativa de pato com laranja" title="Pato com Laranja" style="float:left;">
+[...]
+```
+
+Os comandos em CSS não utilizam igual (=) como os atributos em HTML, eles utilizam dois pontos (:). Eles terminam com ponto e vírgula (;).
+
+Depois de fazer isso, você vai perceber que o texto estará muito próximo da imagem. Para resolver, vamos adicionar uma margem na parte direita da última imagem:
+
+```html
+[...]
+<img src="https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2F4.bp.blogspot.com%2F-BfKwJQgzWcc%2FUjM2ey19flI%2FAAAAAAAABQg%2FWu5L19XUO_I%2Fs1600%2FSAM_3338.JPG&f=1&nofb=1&ipt=677571b2d65e41fdfe0a04e4e459ccdffbfd1a77b469758fd7d99ee29a338e32&ipo=images" height="200" alt="Imagem ilustrativa de pato com laranja" title="Pato com Laranja" style="float:left; margin-right:20px;">
+[...]
+```
+
+Podemos adicionar uma borda também:
+
+```html
+<img 
+    src="https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2F4.bp.blogspot.com%2F-BfKwJQgzWcc%2FUjM2ey19flI%2FAAAAAAAABQg%2FWu5L19XUO_I%2Fs1600%2FSAM_3338.JPG&f=1&nofb=1&ipt=677571b2d65e41fdfe0a04e4e459ccdffbfd1a77b469758fd7d99ee29a338e32&ipo=images" 
+    height="200" 
+    alt="Imagem ilustrativa de pato com laranja" 
+    title="Pato com Laranja" 
+    
+    style="float:left; margin-right:20px; border: solid 3px #000;"
+>
+```
+
+Significado:
+* `solid`: a borda é sólida, uma linha única ao redor do elemento;
+* `3px`: a borda tem 3 pixels de expessura;
+* `#000`: a borda tem a cor preta em hexadecimal.
+
+
+
 ```html
 
 ```
