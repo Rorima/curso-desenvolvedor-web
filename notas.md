@@ -460,11 +460,30 @@ Para a lista ordenada, podemos utilizar:
 
 #### Usando `<i>` e `<em>`
 
+A aparência das *tags* `<i>` e `<em>` é a mesma, mas a diferença entre elas é que a *tag* `<i>` é usada para palavras de outras línguas, termos técnicos, textos em itálico, citações e etc. Já a *tag* `<em>` é usada para dar ênfase, como mostrar a sílaba tônica de uma palavra ou dar ênfase na palavra de uma sentença, por exemplo, quando ela tem uma pronúncia diferente.
 
+A *tag* `<i>` também tem o atributo "lang", no qual você pode indicar a língua do termo que você está usando.
 
 ```html
+<body>
+    <h1>Diferença entre as <i>tags</i> &lt;i&gt; e &lt;em&gt;</h1>
+    
+    <h2>Usando a <i>tag</i> &lt;i&gt;</h2>
+    <p>Isso deixa um <i lang="fr">je ne sais quoi</i> no ar.</p>
+    
+    <p>"<i>O que estou fazendo é usar ingredientes italianos e combiná-los para criar pratos com um gosto moderno para revigorar nossos clientes</i>", disse Steven.</p>
 
+    <h2>Usando a <i>tag</i> &lt;em&gt;</h2>
+    <p><em>Gatos</em> são animais fofos.</p>
+</body>
 ```
+
+Como visto, na aparência não há muita diferença. A maior diferença é a sintática.
+
+#### Usando `<b>` e `<strong>`
+
+Essas duas tags fazem a mesma coisa aparentemente, pois elas deixam o texto em negrito. A diferença entre as duas é somente na semântica. Quando quisermos realçar uma palavra, utilizamos `<strong>`. Geralmente utilizamos `<b>` mais do que `<strong>`.
+
 ```html
 
 ```
