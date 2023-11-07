@@ -509,11 +509,11 @@ Outros atributos:
 
 #### Alterando o alinhamento da imagem
 
-Usando o arquivo anterior como exemplo, observe que a imagem aparece em uma linha, enquanto que o texto aparece em outra linha. Isso é porque a imagem é um elemento, e o texto é outro elemento. Elementos são separados automaticamente.
+Usando o arquivo anterior como exemplo, observe que a imagem aparece em uma linha, enquanto que o texto aparece em outra linha. Isso é porque a imagem é um elemento e o texto é outro elemento. Elementos são separados automaticamente.
 
 Vamos supor que queiramos que o texto apareça ao lado direito da imagem. Podemos fazer isso utilizando estilos (que faz parte do CSS). Para isso, utilizaremos o estilo em linha, que é o estilo feito dentro da *tag* que queremos estilizar.
 
-Como um atributo da *tag* `<img>` digite `style="float:left";`. Isso significa que a imagem vai ficar presa à esquerda e tudo o que tiver em baixo vai vir para a direita dela. "float" significa "flutuar" em português.
+Como um atributo da *tag* `<img>` digite `style="float:left";`. Isso significa que a imagem vai ficar presa à esquerda e tudo o que estiver debaixo dela vai vir para a direita dela. "float" significa "flutuar" em português.
 
 ```html
 [...]
@@ -522,13 +522,19 @@ Como um atributo da *tag* `<img>` digite `style="float:left";`. Isso significa q
 [...]
 ```
 
-Os comandos em CSS não utilizam igual (=) como os atributos em HTML, eles utilizam dois pontos (:). Eles terminam com ponto e vírgula (;).
+Os comandos em CSS não utilizam igual (=) como os atributos em HTML. Eles utilizam dois pontos (:) e terminam com ponto e vírgula (;).
 
 Depois de fazer isso, você vai perceber que o texto estará muito próximo da imagem. Para resolver, vamos adicionar uma margem na parte direita da última imagem:
 
 ```html
 [...]
-<img src="https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2F4.bp.blogspot.com%2F-BfKwJQgzWcc%2FUjM2ey19flI%2FAAAAAAAABQg%2FWu5L19XUO_I%2Fs1600%2FSAM_3338.JPG&f=1&nofb=1&ipt=677571b2d65e41fdfe0a04e4e459ccdffbfd1a77b469758fd7d99ee29a338e32&ipo=images" height="200" alt="Imagem ilustrativa de pato com laranja" title="Pato com Laranja" style="float:left; margin-right:20px;">
+<img 
+    src="https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2F4.bp.blogspot.com%2F-BfKwJQgzWcc%2FUjM2ey19flI%2FAAAAAAAABQg%2FWu5L19XUO_I%2Fs1600%2FSAM_3338.JPG&f=1&nofb=1&ipt=677571b2d65e41fdfe0a04e4e459ccdffbfd1a77b469758fd7d99ee29a338e32&ipo=images" height="200" 
+    alt="Imagem ilustrativa de pato com laranja" 
+    title="Pato com Laranja" 
+    
+    style="float:left; margin-right:20px;"
+>
 [...]
 ```
 
@@ -550,20 +556,66 @@ Significado:
 * `3px`: a borda tem 3 pixels de expessura;
 * `#000`: a borda tem a cor preta em hexadecimal.
 
+**Aplicando o estlo de forma diferente**
 
+Desta vez iremos abrir uma *tag* `<style>` na parte *head*, e criaremos uma classe que terá um conjunto de instruções que iremos adicionar a uma determinada *tag*.
+
+Para adicionar uma classe a um elemento HTML, utilizamos a palavra *class*. Vamos adicionar uma classe a nossa imagem:
+
+```html 
+<img 
+    src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.teleculinaria.pt%2Fwp-content%2Fuploads%2F2017%2F11%2FPato-com-laranja-18.jpg&f=1&nofb=1&ipt=53c77f3d81e01c30b9ffd5c679df60624a73e92555c7f12dba2af1ef5dc4c962&ipo=images"
+    height="200"
+    alt="Imagem de pato com laranja"
+    title="Pato com laranja"
+    class="img-prato"
+>
+```
+
+Agora vamos criar a *tag* `<style>` e vamos mudar o alinhamento da imagem:
 
 ```html
-
+<head>
+    <style>
+        .img-prato {
+            float: right;
+            margin-left: 10px;
+            border: 1px solid #000;
+        }
+    </style>
+</head>
 ```
+
+**Usando o atributo `clear`**
+
+Este atributo é usado para modificar o fluxo de elementos com a propriedade `float`. Ela especifica o que deve acontecer com um elemento que está ao lado de um elemento flutuante.
+
+Vamos supor que queiramos deixar um texto ao lado da imagem na parte de baixo dela; para isso, vamos criar uma classe para o h4 abaixo dela:
+
 ```html
-
+<h4 class="abaixo">Segredo do chef</h4>
 ```
+
+Agora vamos modificar a *tag* `<style>` e vamos adicionar o atributo `clear: right;` no h4:
+
 ```html
-
+[...]
+<style>
+    .img-prato {
+        float: right;
+        margin-left: 10px;
+        border: 1px solid #000;
+    }
+    
+    .abaixo {
+        clear: right;
+    }
+</style>
+[...]
 ```
-```html
 
-```
+Agora o texto foi para baixo da imagem. Colocando a opção `clear: right;` no h4 estamos falando que este elemento h4 não permite nada flutuando em seu lado direito, sendo assim, este elemento é empurrado para baixo, enquanto o elemento que flutua fica acima.
+
 ```html
 
 ```
