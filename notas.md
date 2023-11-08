@@ -616,12 +616,41 @@ Agora vamos modificar a *tag* `<style>` e vamos adicionar o atributo `clear: rig
 
 Agora o texto foi para baixo da imagem. Colocando a opção `clear: right;` no h4 estamos falando que este elemento h4 não permite nada flutuando em seu lado direito, sendo assim, este elemento é empurrado para baixo, enquanto o elemento que flutua fica acima.
 
-```html
+#### Utilizando elementos *figure* e *figcaption*
 
-```
-```html
+A *tag* `<figure>` configura uma imagem em um documento, e a *tag* `<figcaption>` define uma legenda para a imagem.
 
+```html
+<figure>
+    <img
+        src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%3Fid%3DOIP.dQD4_4ZCo6DymuTzpZwNIQHaE8%26pid%3DApi&f=1&ipt=86c13989c3e00e1b738cc120b90e90802b529b6c9f8fb427902e2e8d5e593549&ipo=images"
+        alt="Baleia Jubarte pulando para fora d'água"
+        title="Baleia Jubarte"
+    >
+    <figcaption>Baleia Jubarte pulando para fora d'água. Fonte: Infoescola</figcaption>
+</figure>
 ```
+
+A *tag* `<figure>` é bastante usada também para mostrar ilustrações, diagramas, listas de códigos e etc.
+
+Estilizando as *tags* `<figure>` e `<figcaption>`:
+
+```html
+<style>
+    figure {
+        border: 2px solid;
+        float: right;
+    }
+    
+    figcaption {
+        text-align: center;
+        background: aliceblue;
+    }
+</style>
+```
+
+[Indo para outra unidade agora. Lembre-se de criar um exercício para o último arquivo.]
+
 ```html
 
 ```
