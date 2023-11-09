@@ -484,7 +484,7 @@ Como visto, na aparência não há muita diferença. A maior diferença é a sin
 
 Essas duas tags fazem a mesma coisa aparentemente, pois elas deixam o texto em negrito. A diferença entre as duas é somente na semântica. Quando quisermos realçar uma palavra, utilizamos `<strong>`. Geralmente utilizamos `<b>` mais do que `<strong>`.
 
-### Como adicionar imagens
+### Como Adicionar Imagens
 
 Vamos aprender a inserir uma imagem em nossa página web.
 
@@ -649,26 +649,58 @@ Estilizando as *tags* `<figure>` e `<figcaption>`:
 </style>
 ```
 
-[Indo para outra unidade agora. Lembre-se de criar um exercício para o último arquivo.]
+### Como Adicionar Links
+
+Um link é quando vinculamos uma página à outra.
+
+É preciso utilizar a *tag* `<a>`, que significa "âncora". Devemos utilizar também o atributo `href`, que vai receber o nome do arquivo.
+
+Vamos criar um link que aponta para uma página com o prato do dia. Para isso, ambos os arquivos devem estar na mesma pasta.
 
 ```html
-
+<p><a href="./prato-dia.html">Conheça o prato do dia.</a></p>
 ```
+
+Podemos também vincular uma página externa:
+
 ```html
-
+<p><a href="https://duckduckgo.com/?hps=1&q=pato+com+laranja&atb=v377-1&iax=images&ia=images">Veja imagens de pato com laranja.</a></p>
 ```
+
+Podemos usar um atributo chamado `target` para abrir o site externo em outra aba:
+
 ```html
-
+<p><a href="https://duckduckgo.com/?hps=1&q=pato+com+laranja&atb=v377-1&iax=images&ia=images" target="_blank">Veja imagens de pato com laranja.</a></p>
 ```
+
+#### Compreendendo Links Relativos
+
+Vamos supor que queiramos encontrar um arquivo que está localizado em outra pasta; para isso devemos utilizar os links relativos.
+
+Em links relativos o ponto "." é usado para se referir à pasta atual, e dois pontos seguidos ".." são usados para se referir à pasta anterior. As pastas são separadas por barra "/".
+
+Vamos acessar a pasta "receitas" e linkar o arquivo "prato-dia.html":
+
 ```html
-
+<p><a href="./receitas/prato-dia.html">Conheça o prato do dia.</a></p>
 ```
+
+No código acima nós utilizamos o ponto para nos referir à pasta atual, então usamos a barra e escolhemos a pasta "receitas", e logo em seguida escolhemos o arquivo "prato-dia.html".
+
+Agora vamos usar o caminho de uma imagem que está em uma pasta filha da pasta mãe:
+
 ```html
-
+<p>Esta é a página da <a href="../fundamentos/pizza-calabresa.html">pizza de calabresa</a>.</p>
 ```
+
+Se quisermos ir ainda mais acima, podemos utilizar outro `../`, e podemos ficar repetindo isso o quanto for necessário.
+
 ```html
-
+<p><a href="../../../../pagina-inicial.html">Página inicial</a>.</p>
 ```
+
+#### Links para Dentro da Própria Página
+
 ```html
 
 ```
