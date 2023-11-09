@@ -687,7 +687,7 @@ Vamos acessar a pasta "receitas" e linkar o arquivo "prato-dia.html":
 
 No código acima nós utilizamos o ponto para nos referir à pasta atual, então usamos a barra e escolhemos a pasta "receitas", e logo em seguida escolhemos o arquivo "prato-dia.html".
 
-Agora vamos usar o caminho de uma imagem que está em uma pasta filha da pasta mãe:
+Agora vamos usar o caminho de uma imagem que está em uma pasta filha da pasta mãe (isto é, uma pasta irmã):
 
 ```html
 <p>Esta é a página da <a href="../fundamentos/pizza-calabresa.html">pizza de calabresa</a>.</p>
@@ -701,15 +701,29 @@ Se quisermos ir ainda mais acima, podemos utilizar outro `../`, e podemos ficar 
 
 #### Links para Dentro da Própria Página
 
-```html
+Inicialmente você precisa ter um destino do link. Para isso é necessário adicionar um `id` ao elemento para o qual você quer levar o usuário, que é um código de identificação. O `id` é único e não é repetido na página.
 
-```
 ```html
-
+<h2 id="aperitivos">Aperitivos</h2>
 ```
+
+Agora no `href` do link nós colocamos o nome do *id* com uma cerquilha (#) no começo:
+
 ```html
-
+<a href="#aperitivos">Aperitivos</a>
 ```
+
+#### Criando um Link em uma Imagem
+
+Rodeie a *tag* `<img>` pela *tag* `<a>` e assim você terá uma imagem que serve como um link quando clicada.
+
+```html
+<a href="https://www.google.com.br/">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/Google_2015_logo.svg/2560px-Google_2015_logo.svg.png" alt="Imagem da logo do Google" width="100%">
+</a>
+```
+
+
 ```html
 
 ```
