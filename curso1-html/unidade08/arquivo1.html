@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curso HTML5 Essencial</title>
+
+    <style>
+        /*
+        ul {
+            list-style-type: none; 
+            list-style-image: url('https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fclipartmag.com%2Fimages%2Fstar-with-transparent-background-20.png&f=1&nofb=1&ipt=05d1e258e4c2e914c57e2de457e905cbcd10076f65cd432859e9a1821d50d315&ipo=images'); 
+            padding-left: 300px; 
+            
+        }
+        */
+
+        li {
+            margin-bottom: 10px; /* Adiciona um espaçamento entre os itens da lista */
+        }
+
+        ul {
+  list-style-type: none;
+  padding-left: 20px;
+}
+
+li {
+  margin-bottom: 10px;
+}
+
+li::before {
+  content: ""; /* Adiciona um conteúdo vazio para a pseudo-elemento ::before */
+  display: inline-block; /* Permite ajustar as dimensões da pseudo-elemento */
+  width: 16px; /* Ajusta a largura da imagem do marcador */
+  height: 16px; /* Ajusta a altura da imagem do marcador */
+  background-image: url('https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fclipartmag.com%2Fimages%2Fstar-with-transparent-background-20.png&f=1&nofb=1&ipt=05d1e258e4c2e914c57e2de457e905cbcd10076f65cd432859e9a1821d50d315&ipo=images');
+  background-size: cover; /* Garante que a imagem cubra completamente a área designada */
+  margin-right: 8px; /* Adiciona um espaçamento à direita para separar a imagem do texto */
+}
+
+
+    </style>
+</head>
+
+<body>
+    <ul>
+        <li>Brasil</li>
+        <li>Argentina</li>
+        <li>Mexico</li>
+        <li>Angola</li>
+    </ul>
+
+    <ol>
+        <li>Brasil</li>
+        <li>Argentina</li>
+        <li>Mexico</li>
+        <li>Angola</li>
+    </ol>
+</body>
+
+</html>

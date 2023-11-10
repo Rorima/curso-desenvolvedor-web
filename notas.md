@@ -723,19 +723,95 @@ Rodeie a *tag* `<img>` pela *tag* `<a>` e assim você terá uma imagem que serve
 </a>
 ```
 
+### Criação de listas
+
+**Unidade 8 - Arquivo 1**
+
+Para criar uma lista, inicialmente definimos o tipo da lista, e logo em seguida os itens da lista.
+
+Os itens da lista são definidos com a *tag* `<li>`, que significa "list item" ou "item da lista" em português.
+
+Vamos definir uma lista não ordenada `<ul>`:
 
 ```html
-
+<body>
+    <ul>
+        <li>Brasil</li>
+        <li>Argentina</li>
+        <li>Mexico</li>
+        <li>Angola</li>
+    </ul>
+</body>
 ```
+
+Agora, vamos criar uma lista ordenada `<ol>`:
+
 ```html
-
+<body>
+    <ol>
+        <li>Brasil</li>
+        <li>Argentina</li>
+        <li>Mexico</li>
+        <li>Angola</li>
+    </ol>
+</body>
 ```
+
+**Tipos de lista**
+
+Usando CSS podemos mudar o tipo da lista:
+
 ```html
-
+<head>
+    <style>
+        li {
+            list-style-type: circle;
+        }
+    </style>
+</head>
 ```
+
+Estes são os tipos:
+
+* `armenian`: Utiliza numeração armênia tradicional
+* `circle`: Utiliza um círculo preenchido como marcador de item de lista
+* `decimal`: Utiliza números decimais como marcador de item de lista
+* `decimal-leading-zero`: Utiliza números decimais com zeros à esquerda
+* `disc`: Utiliza um círculo preenchido como marcador de item de lista (similar a `circle`)
+* `georgian`: Utiliza numeração georgiana tradicional
+* `lower-alpha`: Utiliza letras minúsculas (a, b, c, etc.) como marcador de item de lista
+* `lower-greek`: Utiliza letras gregas minúsculas como marcador de item de lista
+* `lower-latin`: Utiliza letras latinas minúsculas como marcador de item de lista
+* `lower-roman`: Utiliza numerais romanos minúsculos como marcador de item de lista
+* `none`: Remove o marcador de item de lista, fazendo com que os itens da lista apareçam sem nenhum símbolo
+* `square`: Utiliza um quadrado preenchido como marcador de item de lista
+* `upper-alpha`: Utiliza letras maiúsculas (A, B, C, etc.) como marcador de item de lista
+* `upper-latin`: Utiliza letras latinas maiúsculas como marcador de item de lista
+* `upper-roman`: Utiliza numerais romanos maiúsculos como marcador de item de lista
+* `inherit`: Herda a propriedade `list-style-type` do elemento pai
+* `initial`: Define a propriedade `list-style-type` para seu valor padrão
+* `unset`: Reinicia a propriedade list-style-type para seu valor herdado, se existir; caso contrário, define-o para o valor inicial.
+
+**Definindo uma imagem como marcador de item de lista**
+
+Utilize o atributo `list-style-image: url();` para escolher uma imagem como marcador da lista. Utilize uma imagem muito pequena.
+
 ```html
+<style>
+    ul {
+        list-style-type: none;
+        list-style-image: url('https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fclipartmag.com%2Fimages%2Fstar-with-transparent-background-20.png&f=1&nofb=1&ipt=05d1e258e4c2e914c57e2de457e905cbcd10076f65cd432859e9a1821d50d315&ipo=images'); 
+        padding-left: 300px;
+        
+    }
 
+    li {
+        margin-bottom: 10px;
+    }
+</style>
 ```
+
+
 ```html
 
 ```
