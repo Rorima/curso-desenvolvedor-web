@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<!--
+    Faça uma página com as seguintes especificações:
+    
+    * use grid;
+    * um retângulo;
+    * três quadrados debaixo do retãngulo;
+    * outro retângulo.
+-->
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <style>
+        .outer-div {
+            background-color: purple;
+            padding: 5rem;
+        }
+        
+        .wrapper {
+            display: grid;
+            grid-template-columns: repeat(3, 33%);
+            gap: 10px;
+        }
+        
+        .wrapper div {
+            background-color: green;
+            padding: 5rem;
+        }
+        
+        .wrapper div:nth-child(even){
+            background-color: black;
+        }
+    </style>
+    
+    <title>Document</title>
+</head>
+<body>
+    <div class="outer-div"></div>
+    
+    <div class="wrapper">
+        <div></div><div></div><div></div>
+    </div>
+    
+    <div class="outer-div"></div>
+</body>
+</html>

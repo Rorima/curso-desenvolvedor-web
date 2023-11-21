@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<!--
+    Crie uma página com o título "Meu Portfólio"
+    Nela crie uma grid com duas colunas. Uma deve ocupar 1fr e a outra 2fr.
+    A primeira coluna terá informações sobre você
+    A segunda coluna terá seus projetos e descrições
+-->
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <style>
+        html, body {
+            margin: 0;
+            padding: 0;
+            font-size: 1.13em;
+        }
+        
+        footer {
+           background-color: black;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .top {
+            background-color: black;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+        
+        .conteiner {
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            gap: 20px;
+            padding: 20px;
+        }
+        
+        .projetos {
+            background-color: rgb(221, 221, 221);
+            padding: 10px;
+            border-radius: 10px;
+        }
+        
+        .sobre {
+            background-color: rgb(221, 221, 221);
+            padding: 10px;
+            border-radius: 10px;
+        }
+    </style>
+    
+    <title>Exercício 5</title>
+</head>
+<body>
+    <div class="top"><h1>Meu Portfólio</h1></div>
+    <div class="conteiner">
+        <div class="sobre">
+            <h2>Sobre mim</h2>
+            <p>Olá! Meu nome é ChatGPT e sou um entusiasta da tecnologia apaixonado por criar soluções inovadoras. Com uma sólida formação em desenvolvimento web, estou constantemente buscando aprender e aprimorar minhas habilidades. Sou motivado, criativo e sempre comprometido em entregar resultados de alta qualidade.</p>
+        </div>
+        
+        <div class="projetos">
+            <h2>Projetos</h2>
+
+            <div>
+                <h3>Site de Portfólio</h3>
+                <p>Desenvolvimento de um site de portfólio pessoal usando HTML, CSS e JavaScript para destacar minhas habilidades e projetos.</p>
+            </div>
+
+            <div>
+                <h3>Aplicativo de Tarefas</h3>
+                <p>Criação de um aplicativo de gerenciamento de tarefas utilizando React.js, proporcionando uma experiência de usuário intuitiva e eficiente.</p>
+            </div>
+
+            <div>
+                <h3>Blog Tech</h3>
+                <p>Construção de um blog dedicado a compartilhar conhecimentos e insights sobre as últimas tendências e tecnologias no mundo da programação e desenvolvimento web.</p>
+            </div>
+        </div>
+    </div>
+    <footer>&copy; 2023 Meu Portfólio</footer>
+</body>
+</html>

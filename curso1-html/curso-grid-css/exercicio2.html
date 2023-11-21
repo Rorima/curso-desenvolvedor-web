@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+
+<!--
+    Crie uma página utilizando o `repeat()` e o `minmax()` 
+-->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <style>
+        .wrapper div {
+            background-color: skyblue;
+            padding: 2rem;
+        }
+        
+        .wrapper div:nth-child(even) {
+            background-color: blue;
+        }
+        
+        .wrapper{
+            display: grid;
+            grid-template-columns: minmax(30%, 40%) repeat(2, 100px) minmax(30%, 40%);
+        }
+    </style>
+    
+    <title>Utilizando repeat e minmax</title>
+</head>
+<body>
+    <div class="wrapper">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+</body>
+</html>
