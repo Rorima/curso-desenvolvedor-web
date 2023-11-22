@@ -254,13 +254,82 @@ Este atributo deve ser usado em um único elemento da *grid*. Ele funciona exata
 
 **`justify-self`**
 
-Este atributo funciona como o `justify-self`, mas deve ser usado em uma célula em específico, e não no contêiner.
+Este atributo funciona como o `justify-items`, mas deve ser usado em uma célula em específico, e não no contêiner.
 
 `start`: o conteúdo fica na parte esquerda da célula;
 `center`: o conteúdo fica centralizado na célula de maneira vertical;
 `end`: o conteúdo fica na parte direita da célula;
 `stretch`: ocupa toda a célula (é o comportamento padrão).
 
+## Ocupando Espaços Parte 1
+
+`./arquivo5.html`
+
+A *grid* é especificada no elemento *wrapper*, ao invés de o fluxo ser controlado em cada elemento. Uma vez definida a *grid*, cabe agora em cada elemento especificar em qual espaço da *grid* o elemento vai ficar.
+
+Vamos especificar uma *grid*:
+
+```css
+.wrapper {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-auto-rows: 100px;
+    padding: 10px;
+    gap: 10px;
+}
+```
+
+Com o atributo `grid-column-start` é possível indicar em qual coluna o elemento começará na *grid*. Já pelo atributo `grid-column-end`, podemos especificar até qual coluna ele vai. Com esses dois é possível colocar elementos em espaços específicos da *grid*, e também é possível utilizar mais de uma célula.
+
+```css
+.wrapper div:nth-child(1) {
+    grid-column-start: 1;
+    grid-column-end: 3;
+}
+```
+
+No código acima estamos configurando a primeira `div` para começar na coluna 1 e terminar onde a coluna 3 começa. Os outros elementos são jogados para as próximas células de acordo com que as células de cima vão sendo utilizadas.
+
+Podemos também utilizar o atributo abreviado, chamado somente de `grid-column`. Colocamos o primeiro e o segundo valor e separamos eles por uma barra, desta maneira:
+
+```css
+.wrapper div:nth-child(4) {
+    grid-column: 1 / 3;
+}
+```
+
+Podemos também utilizar o valor reservado `-1` para o `grid-column-end`, que indica que o elemento cobrirá todas as colunas, isto é, uma fileira inteira.
+
+```css
+.wrapper div:nth-child(2) {
+    grid-column: 1 / -1;
+}
+```
+
+Podemos também utilizar a palavra `span`, que indica a quantidade de espaços que o elemento vai tomar.
+
+```css
+.wrapper div:nth-child(3) {
+    grid-column: 1 / span 3;
+}
+```
+
+## Ocupando Espaços Parte 2
+
+
+
+```css
+```
+```css
+```
+```css
+```
+```css
+```
+```css
+```
+```css
+```
 ```css
 ```
 ```css
@@ -275,7 +344,7 @@ Este atributo funciona como o `justify-self`, mas deve ser usado em uma célula 
 ```
 
 Onde parei:
-https://www.youtube.com/watch?v=VVhxmfLRPJI&list=PLYgzkrmJnLwpeeGgdADYq3cE2yUwLLTOv&index=5&ab_channel=dpw
+https://www.youtube.com/watch?v=03ujH7Z4-yk&list=PLYgzkrmJnLwpeeGgdADYq3cE2yUwLLTOv&index=8&ab_channel=dpw
 
 Curso flexbox:
 https://www.youtube.com/watch?v=SAl0i5rzX3U&list=PLYgzkrmJnLwo8IDD2v7RP_oyE3yzc1fY4&ab_channel=dpw
