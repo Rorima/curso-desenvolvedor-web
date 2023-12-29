@@ -193,6 +193,17 @@ Esta função especifica um tamanho mínimo e um tamanho máximo pra cada linha 
 }
 ```
 
+Podemos também utilizá-lo junto com a palavra reservada `auto` para fazer com que o conteúdo caiba dentro da célula:
+
+```css
+.wrapper {
+    display: grid;
+    grid-template-columns: 100px repeat(3, 200px) 10% minmax(10%, 50%);
+    gap: 1rem;
+    grid-auto-rows: minmax(200px, auto);
+}
+```
+
 ## Unidade `fr`
 
 `./arquivo3.html`
@@ -316,15 +327,113 @@ Podemos também utilizar a palavra `span`, que indica a quantidade de espaços q
 
 ## Ocupando Espaços Parte 2
 
+`arquivo6.html`
 
+Podemos usar somente um valor no `grid-column`, indicando somente a célula inicial em que o elemento estará localizado:
 
 ```css
+.wrapper div:nth-child(2) {
+    grid-column: 1;
+}
 ```
+
+Se houver um elemento antes do elemento selecionado e nós colocarmos que ele irá inicial na coluna 1, ele passa para a próxima linha.
+
+Veja um pequeno exemplo de uma maquete de um site:
+
 ```css
+/* header */
+.wrapper div:nth-child(1) {
+    grid-column: 1 / -1;
+}
+/* menu lateral */
+.wrapper div:nth-child(2) {
+    grid-column: 1;
+}
+/* conteúdo */
+.wrapper div:nth-child(3) {
+    grid-column: 2 / span 2;
+}
+/* footer */
+.wrapper div:nth-child(5) {
+    grid-column: 1 / -1;
+}
 ```
-```css
+
+## Ocupando Espaços Parte 3
+
+Vamos fazer um site responsivo utilizando *grid*. De acordo com que redimensionamos a página, a *grid* vai seguir, ficando cada vez menor ou maior. Seria interessante mudar isso, se a página for redimensionada para ficar bem pequena. Assim poderíamos dividir o conteúdo da página, jogando certas partes para baixo e deixando outras na parte de cima.
+
+Para fazer isso utilizaremos *media queries*, e modificaremos a configuração de linhas e colunas.
+
+Este é o atual leiaute da página:
+
+**HTML**
+
+```html
+<body>
+    <div class="wrapper">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+        <div>5</div>
+    </div>
+</body>
 ```
+
+**CSS**
+
 ```css
+body {
+    background-color: gray;
+}
+
+.wrapper {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-auto-rows: minmax(100px, auto);
+    padding: 10px;
+    gap: 10px;
+}
+
+.wrapper div {
+    background-color: skyblue;
+}
+
+.wrapper div:nth-child(even) {
+    background-color: aliceblue;
+}
+
+.wrapper div:nth-child(1) {
+    grid-column: 1 / -1;
+}
+
+.wrapper div:nth-child(2) {
+    grid-column: 1;
+}
+
+.wrapper div:nth-child(3) {
+    grid-column: 2 / span 2;
+}
+
+.wrapper div:nth-child(5) {
+    grid-column: 1 / -1;
+}
+```
+
+Mudaremos a página de maneira que ela tenha somente uma coluna com várias linhas quando a página for redimensionada para um tamanho de 600px ou menos.
+
+```css
+@media (max-width: 600px) {
+    .wrapper {
+        grid-template-columns: 1fr;
+    }
+
+    .wrapper div:nth-child(3) {
+        grid-column: 1;
+    }
+}
 ```
 ```css
 ```
@@ -344,7 +453,9 @@ Podemos também utilizar a palavra `span`, que indica a quantidade de espaços q
 ```
 
 Onde parei:
-https://www.youtube.com/watch?v=03ujH7Z4-yk&list=PLYgzkrmJnLwpeeGgdADYq3cE2yUwLLTOv&index=8&ab_channel=dpw
+https://www.youtube.com/watch?v=Y-s0zP24lfU&list=PLYgzkrmJnLwpeeGgdADYq3cE2yUwLLTOv&index=10&ab_channel=dpw
+
+NO EXERCÍCIO 10 TENTANDO REPRODUZIR O QUE APRENDEU NO ARQUIVO 7. não tá aparecendo conteúdo. tente resolver
 
 Curso flexbox:
 https://www.youtube.com/watch?v=SAl0i5rzX3U&list=PLYgzkrmJnLwo8IDD2v7RP_oyE3yzc1fY4&ab_channel=dpw

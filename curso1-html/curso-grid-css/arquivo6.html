@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+
+<html lang="pt-BR">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <style>
+        body {
+            background-color: gray;
+        }
+        
+        .wrapper {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-auto-rows: minmax(100px, auto);
+            padding: 10px;
+            gap: 10px;
+        }
+        
+        .wrapper div {
+            background-color: skyblue;
+        }
+        
+        .wrapper div:nth-child(even) {
+            background-color: aliceblue;
+        }
+        
+        .wrapper div:nth-child(1) {
+            grid-column: 1 / -1;
+        }
+
+        .wrapper div:nth-child(2) {
+            grid-column: 1;
+        }
+
+        .wrapper div:nth-child(3) {
+            grid-column: 2 / span 2;
+        }
+        
+        .wrapper div:nth-child(5) {
+            grid-column: 1 / -1;
+        }
+    </style>
+    
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="wrapper">
+        <div>1</div>
+        <div>2</div>
+        <div><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil consectetur accusantium dolores debitis nam voluptatum, officiis, sit quos libero, aliquam neque doloremque ullam magni. Ut, similique possimus. Quos, deleniti maxime! Lorem ipsum dolor sit, amet consectetur adipisicing elit. Debitis quo modi libero, vel maiores obcaecati voluptatibus excepturi. Et, vitae architecto? Doloremque praesentium in modi odio sed accusantium alias dolorum explicabo? Lorem ipsum dolor, sit amet consectetur adipisicing elit. Reprehenderit magnam laborum corrupti illum unde totam quis, assumenda doloribus eius asperiores doloremque autem ullam placeat. Quas dolor unde at animi quis!</p></div>
+        <div>4</div>
+        <div>5</div>
+    </div>
+</body>
+
+</html>

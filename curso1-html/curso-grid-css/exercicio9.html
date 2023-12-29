@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+
+<!--
+    Faça o que aprendeu no arquivo 6 sem consultar
+-->
+
+<html lang="pt-BR">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <style>
+        .wrapper {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-auto-rows: minmax(100px, auto);
+            gap: 10px;
+        }
+        
+        .wrapper div {
+            background-color: skyblue;
+            padding: 10px;
+        }
+        
+        .wrapper div:nth-child(even) {
+            background-color: lightgreen;
+        }
+        
+        .wrapper div:nth-child(1) {
+            grid-column-start: 1;
+            grid-column-end: -1;
+        }
+        
+        .wrapper div:nth-child(3) {
+            grid-column: 2 / span 2;
+        }
+        
+        .wrapper div:nth-child(5) {
+            grid-column: 1 / -1;
+        }
+    </style>
+    
+    <title>Exercício 9</title>
+</head>
+
+<body>
+    <div class="wrapper">
+        <div>1</div>
+        <div>2</div>
+        <div><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe laudantium similique sunt amet vel ipsa assumenda totam iusto consequatur molestiae quibusdam qui aspernatur laborum, voluptas aperiam! Unde ullam quam delectus. Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia laboriosam maiores neque at labore impedit sapiente perferendis dolor rem libero ab tenetur ullam, dolorum sequi! Aperiam ducimus dolorem pariatur iste? Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea corrupti libero minus dolores sequi dolorem neque soluta quia iusto. Accusamus ducimus explicabo provident fugit error dolores assumenda at eveniet dignissimos.</p></div>
+        <div>4</div>
+        <div>5</div>
+    </div>
+</body>
+
+</html>
